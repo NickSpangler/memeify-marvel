@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+meme_1 = Meme.create(title: "2020 for me...")
+
+meme_2 = Meme.create(title: "Parenting as Iron Man...")
+
+panel_1 = Panel.create(image_url: '', caption: '', meme_id: 1)
+panel_1 = Panel.create(image_url: '', caption: '', meme_id: 1)
+panel_1 = Panel.create(image_url: '', caption: '', meme_id: 1)
+panel_1 = Panel.create(image_url: '', caption: '', meme_id: 1)
