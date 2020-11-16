@@ -1,5 +1,6 @@
 function init() {
-    console.log("Working!")
+    const memeContainer = document.querySelector('#View')
+
 }
 
 init()
