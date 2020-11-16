@@ -4,7 +4,12 @@ function init() {
     function getMemes() {
         fetch(`http://localhost:3000/memes`)
         .then(resp => resp.json())
-        .then(json => console.log(json))
+        .then(function(memeData) {
+            memeData.forEach((meme) => {
+                const newMeme = new Meme(meme.title, meme.likes, meme.panels);
+                console.log(newMeme);
+            })
+        })
     }
     getMemes()
 }
