@@ -154,7 +154,6 @@ body {
     background-color: #777;
   }
   
-  /* Style the tab content (and add height:100% for full page content) */
   .pictabcontent {
     color: white;
     display: none;
@@ -163,13 +162,20 @@ body {
     overflow: hidden;
     overflow-y:scroll;
   }
+
+  .square:hover img {
+    opacity: .6;
+  }
   
-  .square img{
+  .square img {
+    opacity: 1;
     float:left;
     position: relative;
     width: 150px;
     height: 150px;
-    padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
-    margin:1.66%;
+    margin: 2%;
+    margin-top: none;
     background-position:center center;
+    transition: .5s ease;
+    backface-visibility: hidden;
   }
