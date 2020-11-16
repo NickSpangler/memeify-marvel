@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  image_url: MyString
+  caption: MyString
+  order: 1
+  meme: one
+
+two:
+  image_url: MyString
+  caption: MyString
+  order: 1
+  meme: two
