@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2020_11_16_152245) do
 
   create_table "memes", force: :cascade do |t|
     t.string "title"
-    t.integer "likes"
+    t.integer "likes", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
