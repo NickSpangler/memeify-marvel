@@ -7,9 +7,272 @@
     <title>Memify Marvel</title>
 </head>
 <body>
+    <p class='center website-title'>MEMEIFY MARVEL</p>
 
-<h1 style="text-align: center">Memeify Marvel</h1>
+    <button class="tablink" onclick="openPage('View', this, 'green')" id="defaultOpen">VIEW MEMES</button>
+    <button class="tablink" onclick="openPage('Create', this, 'red')">CREATE MEMES</button>
     
+    <!-- ------------- BELOW THIS LINE IS THE VIEWING TAB ------------- -->
+    
+    <div id= 'View' class='tabcontent'>
+    
+    <div class='outercontainer'>
+        <div class='center background strip'>
+            <div class='inner-frame'>
+                <div class='image-container'>
+                    <img src='Panel Images/Iron Man Panels/Screen Shot 2020-11-12 at 2.19.10 PM.png'>
+                    <div class="panel-text">
+                        <p>June 2020</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class='inner-frame'>
+                <div class='image-container'>
+                    <img src='Panel Images/Iron Man Panels/Screen Shot 2020-11-12 at 2.19.54 PM.png'>
+                    <div class="panel-text">
+                        <p>August  2020</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class='inner-frame'>
+                <div class='image-container'>
+                    <img src='Panel Images/Iron Man Panels/Screen Shot 2020-11-12 at 2.20.18 PM.png'>
+                    <div class="panel-text">
+                        <p>October 2020</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class='inner-frame'>
+                <div class='image-container'>
+                    <img src='Panel Images/Iron Man Panels/Screen Shot 2020-11-12 at 2.21.21 PM.png'>
+                    <div class="panel-text">
+                        <p>December 2020</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <br>
+    
+    <div class='outercontainer'>
+        <div class='center background strip'>
+            <div class='inner-frame'>
+                <div class='image-container'>
+                    <img src='Panel Images/Iron Man Panels/Screen Shot 2020-11-12 at 2.55.34 PM.png'>
+                    <div class="panel-text">
+                        <p>Waking up as a parent, ready to take on the day.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class='inner-frame'>
+                <div class='image-container'>
+                    <img src='Panel Images/Iron Man Panels/Screen Shot 2020-11-12 at 3.13.29 PM.png'>
+                    <div class="panel-text">
+                        <p>Getting the kids breakfast, getting them dressed, and to school.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class='inner-frame'>
+                <div class='image-container'>
+                    <img src='Panel Images/Iron Man Panels/Screen Shot 2020-11-12 at 3.13.34 PM.png'>
+                    <div class="panel-text">
+                        <p>Picking them up from school, arguing about homework and screentime.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class='inner-frame'>
+                <div class='image-container'>
+                    <img src='Panel Images/Iron Man Panels/Screen Shot 2020-11-12 at 3.14.05 PM.png'>
+                    <div class="panel-text">
+                        <p>Finally putting them to bed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <br>
+    
+    <div class='outercontainer'>
+        <div class='center background strip'>
+            <div class='inner-frame'>
+    
+            </div>
+    
+            <div class='inner-frame'>
+                
+            </div>
+    
+            <div class='inner-frame'>
+                
+            </div>
+    
+            <div class='inner-frame'>
+                
+            </div>
+        </div>
+    </div>
+    
+    </div>
+    
+    <!-- ------------- ABOVE THIS LINE IS THE VIEWING TAB ------------- -->
+    
+    <!-- ------------- BELOW THIS LINE IS THE CREATION TAB ------------- -->
+    
+    <div id='Create' class='tabcontent'>
+    
+    <form id="memeform">
+    
+    <div class="center">
+    <label for="title">TITLE:</label>
+    <input type="text" id="fname" name="title" size="50" maxlength="60">
+    </div>
+    
+    <br>
+    
+        <div class='outercontainer'>
+            <div class='center background strip'>
+                <div class='inner-frame'>
+                    <div class='image-container'>
+                        <p class='createtext'>Select An Image</p>
+                        <br><br>
+                        <textarea id="first-panel-caption" name="first-panel-caption" rows=2 cols="23" placeholder="Add first panel caption..."></textarea>
+                        <div class="panel-text">
+                            
+                        </div>
+                    </div>
+                </div>
+        
+                <div class='inner-frame'>
+                    <div class='image-container'>
+                        <p class='createtext'>Select An Image</p>
+                        <br><br>
+                        <textarea id="second-panel-caption" name="second-panel-caption" rows=2 cols="23" placeholder="Add second panel caption..."></textarea>
+                        <div class="panel-text">
+                            
+                        </div>
+                    </div>
+                </div>
+        
+                <div class='inner-frame'>
+                    <div class='image-container'>
+                        <p class='createtext'>Select An Image</p>
+                        <br><br>
+                        <textarea id="third-panel-caption" name="third-panel-caption" rows=2 cols="23" placeholder="Add third panel caption..."></textarea>
+                        <div class="panel-text">
+                            
+                        </div>
+                    </div>
+                </div>
+        
+                <div class='inner-frame'>
+                    <div class='image-container'>
+                        <p class='createtext'>Select An Image</p>
+                        <br><br>
+                        <textarea id="fourth-panel-caption" name="fourth-panel-caption" rows=2 cols="23" placeholder="Add fourth panel caption..."></textarea>
+                        <div class="panel-text">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <br>
+        
+    </form>
+    
+    <!-- ------------- BELOW THIS LINE IS THE PICTURE SELECT WINDOW ------------- -->
+    <div class="picture-select-window">
+    <button class="pictablink" onclick="openPicPage('IronmanTab', this)" id="picDefaultOpen">IRONMAN</button>
+    <button class="pictablink" onclick="openPicPage('ThorTab', this)">THOR</button>
+    <button class="pictablink" onclick="openPicPage('HulkTab', this)">HULK</button>
+    <button class="pictablink" onclick="openPicPage('SpidermanTab', this)">SPIDERMAN</button>
+    
+    <div id="IronmanTab" class="pictabcontent">
+    
+      <h1>IRONMAN</h1>
+    
+    <div class="square img_1-1">
+        <img src='Panel Images/Iron Man Panels/Screen Shot 2020-11-12 at 2.52.29 PM.png'>
+    </div>
+    <div class="square img_1-2">
+        <img src='Panel Images/Iron Man Panels/Screen Shot 2020-11-12 at 2.53.43 PM.png'>
+    </div>
+    <div class="square img_1-3">
+        <img src='Panel Images/Iron Man Panels/Screen Shot 2020-11-12 at 2.53.46 PM.png'>
+    </div>
+    
+    
+    <div class="square img_2-1">
+    </div>
+    <div class="square img_2-2">
+    </div>
+    <div class="square img_2-3">
+    </div>
+    
+    
+    <div class="square img_3-1">
+    </div>
+    <div class="square img_3-2">
+    </div>
+    <div class="square img_3-3">
+    </div>
+    </div>
+    
+    <div id="ThorTab" class="pictabcontent">
+    
+      <h1>THOR</h1>
+    
+    <div class="square img_1-1">
+    </div>
+    <div class="square img_1-2">
+    </div>
+    <div class="square img_1-3">
+    </div>
+    
+    
+    <div class="square img_2-1">
+    </div>
+    <div class="square img_2-2">
+    </div>
+    <div class="square img_2-3">
+    </div>
+    
+    
+    <div class="square img_3-1">
+    </div>
+    <div class="square img_3-2">
+    </div>
+    <div class="square img_3-3">
+    </div>
+    
+    </div>
+    
+    <div id="HulkTab" class="pictabcontent">
+      <h1>HULK</h1>
+      <p>333333333333333</p>
+    </div>
+    
+    <div id="SpidermanTab" class="pictabcontent">
+      <h1>SPIDERMAN</h1>
+      <p>4444444444444444</p>
+    </div>
+    </div>
+    <!-- ------------- ABOVE THIS LINE IS THE PICTURE SELECT WINDOW ------------- -->
+    
+    </div>
+    <!-- ------------- ABVOVE THIS LINE IS THE CREATION TAB ------------- -->
+    
+    
+<script src='tabs.js'></script>
 <script src='src/index.js'></script>
 </body>
 </html>
