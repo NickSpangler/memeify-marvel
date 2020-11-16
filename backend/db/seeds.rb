@@ -10,7 +10,7 @@ meme_1 = Meme.create(title: "2020 for me...")
 
 meme_2 = Meme.create(title: "Parenting as Iron Man...")
 
-panel_1 = Panel.create(image_url: '', caption: '', meme_id: 1)
-panel_1 = Panel.create(image_url: '', caption: '', meme_id: 1)
-panel_1 = Panel.create(image_url: '', caption: '', meme_id: 1)
-panel_1 = Panel.create(image_url: '', caption: '', meme_id: 1)
+panel_1 = Panel.create(image_url: '', caption: '', meme_id: 1, order: 1)
+panel_2 = Panel.create(image_url: '', caption: '', meme_id: 1, order: 2)
+panel_3 = Panel.create(image_url: '', caption: '', meme_id: 1, order: 3)
+panel_4 = Panel.create(image_url: '', caption: '', meme_id: 1, order: 4)
