@@ -13,6 +13,26 @@ function init() {
         })
     }
     getMemes()
+
+    const ironmanTab = document.querySelector('#IronmanTab')
+    const createPanels = document.querySelectorAll('.image-select-container')
+
+    ironmanTab.onclick = function(e) {
+      if (e.target.classList.value === "selectImage") {
+        const filePath = e.target.attributes.src.value
+        for (let i=0; i < createPanels.length; i++) {
+          if (createPanels[i].classList.contains('empty')) {
+            const panel = createPanels[i]
+            panel.querySelector('p').outerHTML = `<img src='${filePath}'><p></p>`
+            panel.classList.remove('empty');
+            break;
+          }
+        }
+        console.log(e.target.attributes.src.value)
+      }
+    }
+
+
 }
 
 init()
