@@ -1,0 +1,176 @@
+body {
+    background-color: black;
+  }
+  
+  .center {
+      text-align: center;
+    }
+  
+  .background {
+      margin: 0 auto;
+      text-align: center;
+      height: 250px;
+      width: 900px;
+      background-color: #f7f1d4;
+      border: 3px solid #efe3a9;
+  }
+    
+  .outercontainer {
+        height: auto;
+        text-align: center;
+  }
+  
+  
+  .strip:hover {
+      position: relative;
+      z-index: 100;
+      transform: scale(1.2);
+  }
+  
+  .inner-frame {
+      height: 200px;
+      width: 200px;  
+      background-color: #fbf8ea;
+      float: left;
+      border: 1px solid #efe3a9;
+      margin: 25px 11px;
+  }
+  
+  .inner-frame img {
+        height: 198px;
+        width: 198px;
+        margin: 1px 1px;
+  }
+  
+  .inner-frame:hover {
+      position: relative;
+      z-index: 100;
+      transform: scale(1.6);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .image-container {
+      position: relative;
+      max-width: 200px;
+      margin: 0 auto;
+  }
+  
+  .image-container .panel-text {
+      position: absolute; /* Position the background text */
+      bottom: 6px; /* At the bottom. Use top:0 to append it to the top */
+      left: 1px;
+      background: rgb(0, 0, 0); /* Fallback color */
+      background: rgba(133, 20, 20, 0.5); /* Black background with 0.5 opacity */
+      color: #f1f1f1; /* Grey text */
+      width: 99%; /* Full width */
+      max-height: 30px;
+      padding: 0px; /* Some padding */
+      font-size: 8px;
+  }
+  
+    /* <------- HEADING FONT --------> */
+  
+  @font-face {
+      font-family: marvel;
+      src: url('marvel.ttf');
+  }
+  
+  .website-title {
+      font-family: marvel;
+      font-size: 120px;
+      margin: 0px 0px 0px 0px;
+      background: rgb(237, 29, 36);
+      color: white;
+      padding: 25px 0 0 0;
+      border: solid 2px black;
+      box-shadow: inset 0 0 10px #000;
+  }
+  
+  /* <------- FORM ELEMENTS --------> */
+  
+  .createtext {
+    color: black;
+    margin: 45% 0;
+  }
+  
+  /* <------- VIEW / CREATE TABS --------> */
+  
+  /* Set height of body and the document to 100% to enable "full page tabs" */
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+  }
+  
+  /* Style tab links */
+  .tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 50%;
+    box-shadow: inset 0 0 10px #000;
+  }
+  
+  .tablink:hover {
+    background-color: #777;
+  }
+  
+  /* Style the tab content (and add height:100% for full page content) */
+  .tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+  }
+  
+  /* <------- PICTURE SELECT WINDOWS --------> */
+  
+  .picture-select-window {
+    border: solid red 2px;
+    margin-top: 80px;
+    height: 1000px;
+    width: 100%;
+  }
+  
+  .pictablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+    box-shadow: inset 0 0 10px #000;
+  }
+  
+  .pictablink:hover {
+    background-color: #777;
+  }
+  
+  /* Style the tab content (and add height:100% for full page content) */
+  .pictabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 750px;
+    overflow: hidden;
+    overflow-y:scroll;
+  }
+  
+  .square {
+    float:left;
+    position: relative;
+    width: 100px;
+    padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
+    margin:1.66%;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:contain; /* you change this to "contain" if you don't want the images to be cropped */
+  }

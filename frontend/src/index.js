@@ -1,1 +1,5 @@
-console.log('javascript connected')
+function init() {
+    console.log("Working!")
+}
+
+init()
