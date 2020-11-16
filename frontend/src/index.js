@@ -8,6 +8,7 @@ function init() {
             memeData.forEach((meme) => {
                 const newMeme = new Meme(meme.title, meme.likes, meme.panels);
                 console.log(newMeme);
+                memeContainer.innerHTML += newMeme.renderHTML();
             })
         })
     }
