@@ -210,4 +210,15 @@ body {
     height: 198px;
     width: 198px;
     margin: 1px 1px 15px !important;
+    position: relative;
+
+  }
+
+  .delete-x {
+    height: 198px;
+    width: 198px;
+    position: absolute;
+    top: 1px;
+    left: 90px;
+
   }

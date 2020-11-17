@@ -24,7 +24,8 @@ function init() {
         for (let i=0; i < createPanels.length; i++) {
           if (createPanels[i].classList.contains('empty')) {
             const panel = createPanels[i]
-            panel.querySelector('p').outerHTML = `<img src='${filePath}'>`
+            panel.querySelector('p').outerHTML = `<img src='${filePath}'>
+                                                  <div class='delete-x'>&#10060;</div>`
             panel.classList.remove('empty');
             break;
           }
