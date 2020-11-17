@@ -79,7 +79,12 @@ function clearForm() {
 
 function createMeme() {
   const title = document.querySelector('#fname').value
-  const panels = 
+  const panels = []
+  document.querySelectorAll('.image-select-container').forEach(function(container) {
+    if  (!container.classList.contains('empty') {
+      panels.push({img_url: 'from form', caption: 'from form'})
+    })
+  })
   clearForm();
   document.getElementById("defaultOpen").click();
 }
