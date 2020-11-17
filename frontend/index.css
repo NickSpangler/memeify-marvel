@@ -205,3 +205,9 @@ body {
     transition: .5s ease;
     backface-visibility: hidden;
   }
+
+  .image-select-container img {
+    height: 198px;
+    width: 198px;
+    margin: 1px 1px 15px !important;
+  }
