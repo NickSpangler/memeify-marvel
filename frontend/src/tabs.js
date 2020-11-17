@@ -3,13 +3,17 @@
 function openPage(pageName, elmnt) {
     // Hide all elements with class="tabcontent" by default */
     var i, tabcontent, tablinks;
+    tablinks = document.getElementsByClassName('tablink')
+    for (let i = 0; i < tablinks.length; i++) {
+      tablinks[i].classList.remove('mainactive');
+    } 
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
     }
   
     // Show the specific tab content
-
+    elmnt.classList.add('mainactive')
     document.getElementById(pageName).style.display = "block";
   
   }
