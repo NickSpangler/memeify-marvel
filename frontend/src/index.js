@@ -63,8 +63,10 @@ function init() {
         e.target.remove();
       }
     }
+}
 
-
+function clearForm() {
+  document.getElementById('memeform').reset()
 }
 
 init()

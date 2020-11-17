@@ -9,8 +9,8 @@
 <body>
     <p class='center website-title'>MEMEIFY MARVEL</p>
 
-    <button class="tablink" onclick="openPage('View', this, 'green')" id="defaultOpen">VIEW MEMES</button>
-    <button class="tablink" onclick="openPage('Create', this, 'red')">CREATE MEMES</button>
+    <button class="tablink" onclick="openPage('View', this)" id="defaultOpen">VIEW MEMES</button>
+    <button class="tablink" onclick="openPage('Create', this)" id='createMemeTab'>CREATE MEMES</button>
     
     <!-- ------------- BELOW THIS LINE IS THE VIEWING TAB ------------- -->
     
@@ -81,13 +81,13 @@
                 </div>
             </div>
         </div>
-    
+    </form>
     <br><br>
     <div class='button-container'>
         <button class="formbutton">MEMEIFY</button>
         <button class="formbutton" onclick="clearForm(this)">CLEAR</button>
     </div>
-</form>
+
     
     
     <!-- ------------- BELOW THIS LINE IS THE PICTURE SELECT WINDOW ------------- -->
