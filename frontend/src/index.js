@@ -20,7 +20,7 @@ function init() {
         let likes = e.target.nextElementSibling
         likes.innerHTML = parseInt(likes.innerHTML) + 1;
         const data = {likes: parseInt(likes.innerHTML)}
-        fetch(`www.localhost:3000/memes/${e.target.id}/like`, {
+        fetch(`http://localhost:3000/memes/${e.target.id}/like`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
