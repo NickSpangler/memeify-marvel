@@ -10,14 +10,14 @@ body {
       margin: 0 auto;
       text-align: center;
       height: 250px;
-      width: 900px;
+      /* width: 900px; */
+      display: inline-block;
       background-color: #f7f1d4;
       border: 3px solid #efe3a9;
   }
 
   .title-bar {
     margin: 0 auto;
-    /* text-align: center; */
     color: black;
     height: 25px;
     width: 900px;
@@ -54,8 +54,6 @@ body {
   color: rgb(237, 29, 36);
 }
 
-
-    
   .outercontainer {
         height: auto;
         text-align: center;
