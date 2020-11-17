@@ -69,10 +69,19 @@ function clearForm() {
   document.getElementById('memeform').reset()
   const containers = document.querySelectorAll('.image-select-container')
   containers.forEach(function(container) {
+    if (!container.classList.contains('empty')) {
     container.querySelector('img').remove()
     container.querySelector('.delete-x').outerHTML = `<p class='createtext'>Select An Image</p>`
     container.classList.add('empty')
+    }
   })
+}
+
+function createMeme() {
+  const title = document.querySelector('#fname').value
+  const panels = 
+  clearForm();
+  document.getElementById("defaultOpen").click();
 }
 
 init()
