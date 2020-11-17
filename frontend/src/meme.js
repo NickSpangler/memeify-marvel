@@ -8,6 +8,10 @@ class Meme {
 
     renderHTML() {
         return `
+            <div class='title-bar'>
+                <div class='title-container'></div>
+                <div class='like-container'></div>
+            </div>
             <div class='outercontainer'>
                 <div class='center background strip'>
                     ${this.panels.map((panel) => `
