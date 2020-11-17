@@ -21,13 +21,19 @@ function openPage(pageName, elmnt) {
 
   function openPicPage(pageName, elmnt) {
     // Hide all elements with class="tabcontent" by default */
+    elmnt.classList.add('active')
     var i, pictabcontent, tablinks;
+    tablinks = document.getElementsByClassName("pictablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].classList.remove('active');
+    }
     pictabcontent = document.getElementsByClassName("pictabcontent");
     for (i = 0; i < pictabcontent.length; i++) {
       pictabcontent[i].style.display = "none";
     }
   
     // Show the specific tab content
+    elmnt.classList.add('active')
     document.getElementById(pageName).style.display = "block";
   
   }

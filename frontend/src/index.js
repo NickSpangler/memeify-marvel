@@ -33,10 +33,9 @@ function init() {
       }
     }
 
-    createPanel.onclick = function(e) {
+    createMeme.onclick = function(e) {
       const regex = RegExp('img');
       if (regex.test(e.target.outerHTML)) {
-        debugger
         e.target.parentElement.classList.add('empty');
         e.target.outerHTML = `<p class='createtext'>Select An Image</p>`
       }
