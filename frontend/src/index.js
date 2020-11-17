@@ -77,9 +77,14 @@ function clearForm() {
 }
 
 function createMeme() {
+  const imageselectcontainers = document.querySelectorAll('.image-select-container')
+  if ([...imageselectcontainers].every(container => container.classList.contains('empty'))) {
+    alert('Please include at least one image in your meme.');
+    return;
+  }
   const memeTitle = document.querySelector('#fname').value
   const memePanels = []
-  document.querySelectorAll('.image-select-container').forEach(function(panel) {
+  imageselectcontainers.forEach(function(panel) {
     if  (!panel.classList.contains('empty')) {
       memePanels.push({image_url: `${panel.querySelector('img').getAttribute('src')}`, 
                               caption: `${panel.querySelector('textarea').value}`})
