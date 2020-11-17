@@ -17,7 +17,7 @@ body {
   }
 
   .title-bar {
-    margin: 0 auto;
+    margin-bottom: 0 auto;
     color: black;
     height: 25px;
     width: 898px;
@@ -30,14 +30,14 @@ body {
   color:black;
   float:left;
   margin-left: 12px;
-  margin-top: 5px;
+  margin-top: 4px;
 }
 
 .like-container {
   color: black;
   position: relative;
   float: right;
-  margin-top: 5px;
+  margin-top: 4px;
   margin-right: 12px;
 }
 
@@ -53,6 +53,10 @@ body {
 [class*="entypo-"]:before {
   font-family: 'entypo', sans-serif;
   color: rgb(237, 29, 36);
+}
+
+.entypo-heart:hover {
+  cursor: pointer;
 }
 
   .outercontainer {
@@ -99,7 +103,7 @@ body {
   
   .image-container .panel-text {
       position: absolute; /* Position the background text */
-      bottom: 6px; /* At the bottom. Use top:0 to append it to the top */
+      bottom: 4px; /* At the bottom. Use top:0 to append it to the top */
       left: 1px;
       background: rgb(0, 0, 0); /* Fallback color */
       background: rgba(133, 20, 20, 0.5); /* Black background with 0.5 opacity */
@@ -314,7 +318,7 @@ body {
     margin: 0 auto;
     color: black;
     height: 25px;
-    width: 225px;
+    width: 224px;
     background-color: #f7f1d4;
     border: 3px solid #efe3a9;
     display: inline-block;
@@ -345,8 +349,17 @@ body {
   margin: 0 auto;
   color: black;
   height: 25px;
-  width: 896px;
+  width: 897px;
   background-color: #f7f1d4;
   border: 3px solid #efe3a9;
   display: inline-block;
 }
+
+/* .glyphicon {
+  margin-right: 7px;
+}
+
+.glyphicon:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+} */
