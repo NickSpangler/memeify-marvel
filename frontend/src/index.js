@@ -67,6 +67,12 @@ function init() {
 
 function clearForm() {
   document.getElementById('memeform').reset()
+  const containers = document.querySelectorAll('.image-select-container')
+  containers.forEach(function(container) {
+    container.querySelector('img').remove()
+    container.querySelector('.delete-x').outerHTML = `<p class='createtext'>Select An Image</p>`
+    container.classList.add('empty')
+  })
 }
 
 init()
