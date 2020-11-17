@@ -10,4 +10,12 @@ class MemesController < ApplicationController
         meme.update(likes: params['likes'])
         render json: meme, include: :panels
     end
+
+    def create
+        meme = Meme.create(title: params[:title])
+        params[:panels].each do |panel|
+            meme.panels.create(image_url: panel[:image_url], caption: panel[:caption])
+        end
+        render json: meme, include: :panels
+    end
 end

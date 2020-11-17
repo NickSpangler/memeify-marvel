@@ -82,7 +82,7 @@ function createMeme() {
   const memePanels = []
   document.querySelectorAll('.image-select-container').forEach(function(panel) {
     if  (!panel.classList.contains('empty')) {
-      memePanels.push({img_url: `${panel.querySelector('img').getAttribute('src')}`, 
+      memePanels.push({image_url: `${panel.querySelector('img').getAttribute('src')}`, 
                               caption: `${panel.querySelector('textarea').value}`})
     }
   })
@@ -105,7 +105,7 @@ function createMeme() {
           console.error('Error:', error);
         });
   clearForm();
-  
+
   document.getElementById("defaultOpen").click();
 }
 
