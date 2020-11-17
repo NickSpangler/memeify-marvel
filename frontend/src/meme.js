@@ -8,10 +8,6 @@ class Meme {
 
     renderHTML() {
         return `
-            <div class='title-bar'>
-                <div class='title-container'>${this.title}</div>
-                <div class='like-container'>${this.likes}</div>
-            </div>
             <div class='outercontainer'>
                 <div class='center background strip'>
                     ${this.panels.map((panel) => `
@@ -24,6 +20,10 @@ class Meme {
                         </div>
                     </div>`).join(' ')}
                 </div>
+            </div>
+            <div class='title-bar'>
+                <div class='title-container'>${this.title}</div>
+                <div class='like-container'><span class="entypo-heart"></span> ${this.likes}</div>
             </div>
             <br>`
     }
