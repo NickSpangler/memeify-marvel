@@ -17,7 +17,8 @@ body {
 
   .title-container {
     margin: 0 auto;
-    text-align: center;
+    /* text-align: center; */
+    color: black;
     height: 25px;
     width: 900px;
     background-color: #f7f1d4;
