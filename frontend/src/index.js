@@ -35,10 +35,10 @@ function init() {
     }
 
     createMeme.onclick = function(e) {
-      const regex = RegExp('img');
-      if (regex.test(e.target.outerHTML)) {
+      if (e.target.classList.contains('delete-x')) {
         e.target.parentElement.classList.add('empty');
-        e.target.outerHTML = `<p class='createtext'>Select An Image</p>`
+        e.target.previousElementSibling.outerHTML = `<p class='createtext'>Select An Image</p>`;
+        e.target.remove();
       }
     }
 
