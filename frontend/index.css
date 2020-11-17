@@ -20,9 +20,10 @@ body {
     margin: 0 auto;
     color: black;
     height: 25px;
-    width: 900px;
+    width: 898px;
     background-color: #f7f1d4;
     border: 3px solid #efe3a9;
+    display: inline-block;
 }
 
 .title-container {
@@ -56,7 +57,9 @@ body {
 
   .outercontainer {
         height: auto;
-        text-align: center;
+        width: 905px;
+        display: inline-block;
+        text-align: left;
   }
   
   
@@ -200,6 +203,7 @@ body {
   
   /* Style the tab content (and add height:100% for full page content) */
   .tabcontent {
+    text-align: center;
     color: white;
     display: none;
     padding: 60px 20px;
@@ -305,3 +309,34 @@ body {
     opacity: 1;
     cursor: pointer;
   }
+
+  .panel-1 {
+    margin: 0 auto;
+    color: black;
+    height: 25px;
+    width: 225px;
+    background-color: #f7f1d4;
+    border: 3px solid #efe3a9;
+    display: inline-block;
+    margin-right: 500px;
+}
+
+.panel-2 {
+  margin: 0 auto;
+  color: black;
+  height: 25px;
+  width: 449px;
+  background-color: #f7f1d4;
+  border: 3px solid #efe3a9;
+  display: inline-block;
+}
+
+.panel-3 {
+  margin: 0 auto;
+  color: black;
+  height: 25px;
+  width: 675px;
+  background-color: #f7f1d4;
+  border: 3px solid #efe3a9;
+  display: inline-block;
+}

@@ -21,11 +21,11 @@ class Meme {
                         </div>
                     </div>`).join(' ')}
                 </div>
+                <div class='title-bar panel-${this.panels.length}'>
+                    <div class='title-container'>${this.title}</div>
+                    <div class='like-container'><span id='${this.id}' class="entypo-heart"></span> <span class='like-number'>${this.likes}</span></div>
+                </div>
             </div>
-            <div class='title-bar'>
-                <div class='title-container'>${this.title}</div>
-                <div class='like-container'><span id='${this.id}' class="entypo-heart"></span> <span class='like-number'>${this.likes}</span></div>
-            </div>
-            <br>`
+            <br><br>`
     }
 }
