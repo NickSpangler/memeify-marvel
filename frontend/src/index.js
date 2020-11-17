@@ -19,7 +19,22 @@ function init() {
       if (e.target.classList.value === 'entypo-heart') {
         let likes = e.target.nextElementSibling
         likes.innerHTML = parseInt(likes.innerHTML) + 1;
-        console.log(likes)
+        const data = {likes: parseInt(likes.innerHTML)}
+        debugger
+        fetch(`www.localhost:3000/memes/:id/like`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Success:', data);
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
       }  
     }
 
