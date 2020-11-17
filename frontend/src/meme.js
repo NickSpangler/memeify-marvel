@@ -23,7 +23,7 @@ class Meme {
             </div>
             <div class='title-bar'>
                 <div class='title-container'>${this.title}</div>
-                <div class='like-container'><span class="entypo-heart"></span> ${this.likes}</div>
+                <div class='like-container'><span class="entypo-heart"></span> <span class='like-number'>${this.likes}</span></div>
             </div>
             <br>`
     }

@@ -14,12 +14,21 @@ function init() {
     }
     getMemes()
 
+    const viewwindow = document.querySelector('#View')
+    viewwindow.onclick = function(e) {
+      if (e.target.classList.value === 'entypo-heart') {
+        let likes = e.target.nextElementSibling
+        likes.innerHTML = parseInt(likes.innerHTML) + 1;
+        console.log(likes)
+      }  
+    }
+
     const ironmanTab = document.querySelector('#IronmanTab')
     const createMeme = document.querySelector('#createMeme')
     const createPanels = document.querySelectorAll('.image-select-container')
 
     ironmanTab.onclick = function(e) {
-      if (e.target.classList.value === "selectImage") {
+      if (e.target.classList.value === 'selectImage') {
         const filePath = e.target.attributes.src.value
         for (let i=0; i < createPanels.length; i++) {
           if (createPanels[i].classList.contains('empty')) {
@@ -30,7 +39,6 @@ function init() {
             break;
           }
         }
-        console.log(e.target.attributes.src.value)
       }
     }
 
