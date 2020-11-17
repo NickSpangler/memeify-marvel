@@ -78,14 +78,34 @@ function clearForm() {
 }
 
 function createMeme() {
-  const title = document.querySelector('#fname').value
-  const panels = []
-  document.querySelectorAll('.image-select-container').forEach(function(container) {
-    if  (!container.classList.contains('empty') {
-      panels.push({img_url: 'from form', caption: 'from form'})
-    })
+  const memeTitle = document.querySelector('#fname').value
+  const memePanels = []
+  document.querySelectorAll('.image-select-container').forEach(function(panel) {
+    if  (!panel.classList.contains('empty')) {
+      memePanels.push({img_url: `${panel.querySelector('img').getAttribute('src')}`, 
+                              caption: `${panel.querySelector('textarea').value}`})
+    }
   })
+  const data = {
+    title: memeTitle,
+    panels: memePanels
+  }
+  fetch(`http://localhost:3000/memes`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Success:', data);
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
   clearForm();
+  
   document.getElementById("defaultOpen").click();
 }
 
