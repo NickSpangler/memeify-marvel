@@ -6,7 +6,7 @@ function init() {
         .then(resp => resp.json())
         .then(function(memeData) {
             memeData.forEach((meme) => {
-                const newMeme = new Meme(meme.title, meme.likes, meme.panels);
+                const newMeme = new Meme(meme.id, meme.title, meme.likes, meme.panels);
                 console.log(newMeme);
                 memeContainer.innerHTML += newMeme.renderHTML();
             })
@@ -20,8 +20,7 @@ function init() {
         let likes = e.target.nextElementSibling
         likes.innerHTML = parseInt(likes.innerHTML) + 1;
         const data = {likes: parseInt(likes.innerHTML)}
-        debugger
-        fetch(`www.localhost:3000/memes/:id/like`, {
+        fetch(`www.localhost:3000/memes/${e.target.id}/like`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

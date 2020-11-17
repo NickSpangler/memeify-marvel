@@ -1,6 +1,7 @@
 class Meme {
 
-    constructor(title, likes, panels) {
+    constructor(id, title, likes, panels) {
+    this.id = id;
     this.title = title;
     this.likes = likes;
     this.panels = panels;
@@ -23,7 +24,7 @@ class Meme {
             </div>
             <div class='title-bar'>
                 <div class='title-container'>${this.title}</div>
-                <div class='like-container'><span class="entypo-heart"></span> <span class='like-number'>${this.likes}</span></div>
+                <div class='like-container'><span id='${this.id}' class="entypo-heart"></span> <span class='like-number'>${this.likes}</span></div>
             </div>
             <br>`
     }
