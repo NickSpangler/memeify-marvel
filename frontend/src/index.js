@@ -13,6 +13,7 @@ function init() {
     //     })
     // }
     
+    memeContainer.addEventListener('click', e => ClickEvents.download(e))
 
     // DEFINE THIS IN CLICK CLASS
     memeContainer.onclick = (e) => ClickEvents.like(e)
