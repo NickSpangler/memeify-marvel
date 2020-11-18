@@ -15,12 +15,13 @@ function init() {
     
 
     // DEFINE THIS IN CLICK CLASS
-    memeContainer.onclick = function(e) {
-      if (e.target.classList.value === 'entypo-heart') {
-        let likes = e.target.nextElementSibling
-        likes.innerHTML = parseInt(likes.innerHTML) + 1;
-        const data = {likes: parseInt(likes.innerHTML)}
-        Api.addLike(e, data)
+    memeContainer.onclick = (e) => ClickEvents.like(e)
+    // memeContainer.onclick = function(e) {
+    //   if (e.target.classList.value === 'entypo-heart') {
+    //     let likes = e.target.nextElementSibling
+    //     likes.innerHTML = parseInt(likes.innerHTML) + 1;
+    //     const data = {likes: parseInt(likes.innerHTML)}
+    //     Api.addLike(e, data)
         // DEFINE THIS IN API CLASS
         // fetch(`http://localhost:3000/memes/${e.target.id}/like`, {
         //   method: 'POST',
@@ -36,36 +37,38 @@ function init() {
         // .catch((error) => {
         //   console.error('Error:', error);
         // });
-      }  
-    }
+    //   }  
+    // }
 
     const ironmanTab = document.querySelector('#IronmanTab')
     const createMeme = document.querySelector('#createMeme')
     const createPanels = document.querySelectorAll('.image-select-container')
 
     // DEFINE THIS IN CLICK CLASS
-    ironmanTab.onclick = function(e) {
-      if (e.target.classList.value === 'selectImage') {
-        const filePath = e.target.attributes.src.value
-        for (let i=0; i < createPanels.length; i++) {
-          if (createPanels[i].classList.contains('empty')) {
-            const panel = createPanels[i]
-            panel.querySelector('p').outerHTML = `<img src='${filePath}'>
-                                                  <div class='delete-x'>&#10060;</div>`
-            panel.classList.remove('empty');
-            break;
-          }
-        }
-      }
-    }
+    ironmanTab.onclick = (e) => ClickEvents.addImageToTemplate(e)
+    // ironmanTab.onclick = function(e) {
+    //   if (e.target.classList.value === 'selectImage') {
+    //     const filePath = e.target.attributes.src.value
+    //     for (let i=0; i < createPanels.length; i++) {
+    //       if (createPanels[i].classList.contains('empty')) {
+    //         const panel = createPanels[i]
+    //         panel.querySelector('p').outerHTML = `<img src='${filePath}'>
+    //                                               <div class='delete-x'>&#10060;</div>`
+    //         panel.classList.remove('empty');
+    //         break;
+    //       }
+    //     }
+    //   }
+    // }
     // DEFINE THIS IN CLICK CLASS
-    createMeme.onclick = function(e) {
-      if (e.target.classList.contains('delete-x')) {
-        e.target.parentElement.classList.add('empty');
-        e.target.previousElementSibling.outerHTML = `<p class='createtext'>Select An Image</p>`;
-        e.target.remove();
-      }
-    }
+    createMeme.onclick = (e) => ClickEvents.removeImageFromTemplate(e)
+    // createMeme.onclick = function(e) {
+    //   if (e.target.classList.contains('delete-x')) {
+    //     e.target.parentElement.classList.add('empty');
+    //     e.target.previousElementSibling.outerHTML = `<p class='createtext'>Select An Image</p>`;
+    //     e.target.remove();
+    //   }
+    // }
 }
   // DEFINE THIS IN CLICK CLASS
 function clearForm() {
