@@ -71,17 +71,17 @@ function init() {
     // }
 }
   // DEFINE THIS IN CLICK CLASS
-function clearForm() {
-  document.getElementById('memeform').reset()
-  const containers = document.querySelectorAll('.image-select-container')
-  containers.forEach(function(container) {
-    if (!container.classList.contains('empty')) {
-    container.querySelector('img').remove()
-    container.querySelector('.delete-x').outerHTML = `<p class='createtext'>Select An Image</p>`
-    container.classList.add('empty')
-    }
-  })
-}
+// function clearForm() {
+//   document.getElementById('memeform').reset()
+//   const containers = document.querySelectorAll('.image-select-container')
+//   containers.forEach(function(container) {
+//     if (!container.classList.contains('empty')) {
+//     container.querySelector('img').remove()
+//     container.querySelector('.delete-x').outerHTML = `<p class='createtext'>Select An Image</p>`
+//     container.classList.add('empty')
+//     }
+//   })
+// }
 
 // DEFINE THIS IN MEME CLASS?
 function createMeme() {
@@ -121,8 +121,8 @@ function createMeme() {
   //       .catch((error) => {
   //         console.error('Error:', error);
   //       });
-  Api.postMeme(data)
-  clearForm();
+  Api.postMeme(data);
+  ClickEvents.clearForm();
   
   document.getElementById("defaultOpen").click();
 }
