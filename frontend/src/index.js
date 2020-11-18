@@ -1,17 +1,17 @@
 function init() {
     const memeContainer = document.querySelector('#View')
     // DEFINE THIS IN API CLASS
-    function getMemes() {
-        fetch(`http://localhost:3000/memes`)
-        .then(resp => resp.json())
-        .then(function(memeData) {
-            memeData.forEach((meme) => {
-                const newMeme = new Meme(meme);
-                memeContainer.innerHTML += newMeme.renderHTML();
-            })
-        })
-    }
-    getMemes()
+    // function getMemes() {
+    //     fetch(`http://localhost:3000/memes`)
+    //     .then(resp => resp.json())
+    //     .then(function(memeData) {
+    //         memeData.forEach((meme) => {
+    //             const newMeme = new Meme(meme);
+    //             memeContainer.innerHTML += newMeme.renderHTML();
+    //         })
+    //     })
+    // }
+    Api.getAllMemes()
 
     const viewwindow = document.querySelector('#View')
     // DEFINE THIS IN CLICK CLASS
