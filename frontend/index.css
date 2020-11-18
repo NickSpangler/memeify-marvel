@@ -355,11 +355,6 @@ body {
   display: inline-block;
 }
 
-/* .glyphicon {
-  margin-right: 7px;
-}
-
-.glyphicon:hover {
-  transform: scale(1.5);
+.download-button:hover {
   cursor: pointer;
-} */
+}
