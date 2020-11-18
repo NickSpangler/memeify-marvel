@@ -51,6 +51,7 @@ body {
 }
 
 [class*="entypo-"]:before {
+  margin-left: 10px;
   font-family: 'entypo', sans-serif;
   color: rgb(237, 29, 36);
 }

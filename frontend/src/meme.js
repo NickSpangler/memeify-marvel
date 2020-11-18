@@ -23,7 +23,7 @@ class Meme {
                 </div>
                 <div class='title-bar panel-${this.panels.length}'>
                     <div class='title-container'>${this.title}</div>
-                    <div class='like-container'><span id='${this.id}' class="entypo-heart"></span> <span class='like-number'>${this.likes}</span></div>
+                    <div class='like-container'><i style="font-size:18px margin-right: 50px;" class="fa">&#xf019;</i><span id='${this.id}' class="entypo-heart"></span> <span class='like-number'>${this.likes}</span></div>
                 </div>
             </div>
             <br><br>`
