@@ -1,5 +1,6 @@
 function init() {
     const memeContainer = document.querySelector('#View')
+    Api.getAllMemes()
     // DEFINE THIS IN API CLASS
     // function getMemes() {
     //     fetch(`http://localhost:3000/memes`)
@@ -11,7 +12,7 @@ function init() {
     //         })
     //     })
     // }
-    Api.getAllMemes()
+    
 
     const viewwindow = document.querySelector('#View')
     // DEFINE THIS IN CLICK CLASS
@@ -20,6 +21,7 @@ function init() {
         let likes = e.target.nextElementSibling
         likes.innerHTML = parseInt(likes.innerHTML) + 1;
         const data = {likes: parseInt(likes.innerHTML)}
+        Api.addLike(e, data)
         // DEFINE THIS IN API CLASS
         // fetch(`http://localhost:3000/memes/${e.target.id}/like`, {
         //   method: 'POST',
@@ -35,7 +37,6 @@ function init() {
         // .catch((error) => {
         //   console.error('Error:', error);
         // });
-        Api.addLike(e, data)
       }  
     }
 
