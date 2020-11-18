@@ -84,24 +84,26 @@ function init() {
 // }
 
 // DEFINE THIS IN MEME CLASS?
-function createMeme() {
-  const imageselectcontainers = document.querySelectorAll('.image-select-container')
-  if ([...imageselectcontainers].every(container => container.classList.contains('empty'))) {
-    alert('Please include at least one image in your meme.');
-    return;
-  }
-  const memeTitle = document.querySelector('#fname').value
-  const memePanels = []
-  imageselectcontainers.forEach(function(panel) {
-    if  (!panel.classList.contains('empty')) {
-      memePanels.push({image_url: `${panel.querySelector('img').getAttribute('src')}`, 
-                              caption: `${panel.querySelector('textarea').value}`})
-    }
-  })
-  const data = {
-    title: memeTitle,
-    panels: memePanels
-  }
+// function createMeme() {
+//   const imageselectcontainers = document.querySelectorAll('.image-select-container')
+//   if ([...imageselectcontainers].every(container => container.classList.contains('empty'))) {
+//     alert('Please include at least one image in your meme.');
+//     return;
+//   }
+//   const memeTitle = document.querySelector('#fname').value
+//   const memePanels = []
+//   imageselectcontainers.forEach(function(panel) {
+//     if  (!panel.classList.contains('empty')) {
+//       memePanels.push({image_url: `${panel.querySelector('img').getAttribute('src')}`, 
+//                               caption: `${panel.querySelector('textarea').value}`})
+//     }
+//   })
+//   const data = {
+//     title: memeTitle,
+//     panels: memePanels
+//   }
+
+
   // DEFINE THIS IN API CLASS
   // fetch(`http://localhost:3000/memes`, {
   //         method: 'POST',
@@ -121,10 +123,11 @@ function createMeme() {
   //       .catch((error) => {
   //         console.error('Error:', error);
   //       });
-  Api.postMeme(data);
-  ClickEvents.clearForm();
-  
-  document.getElementById("defaultOpen").click();
-}
+
+
+//   Api.postMeme(data);
+//   ClickEvents.clearForm();
+//   document.getElementById("defaultOpen").click();
+// }
 
 init()
