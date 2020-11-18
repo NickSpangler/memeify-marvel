@@ -1,6 +1,6 @@
 function init() {
     const memeContainer = document.querySelector('#View')
-
+    // DEFINE THIS IN API CLASS
     function getMemes() {
         fetch(`http://localhost:3000/memes`)
         .then(resp => resp.json())
@@ -14,11 +14,13 @@ function init() {
     getMemes()
 
     const viewwindow = document.querySelector('#View')
+    // DEFINE THIS IN CLICK CLASS
     viewwindow.onclick = function(e) {
       if (e.target.classList.value === 'entypo-heart') {
         let likes = e.target.nextElementSibling
         likes.innerHTML = parseInt(likes.innerHTML) + 1;
         const data = {likes: parseInt(likes.innerHTML)}
+        // DEFINE THIS IN API CLASS
         fetch(`http://localhost:3000/memes/${e.target.id}/like`, {
           method: 'POST',
           headers: {
@@ -40,6 +42,7 @@ function init() {
     const createMeme = document.querySelector('#createMeme')
     const createPanels = document.querySelectorAll('.image-select-container')
 
+    // DEFINE THIS IN CLICK CLASS
     ironmanTab.onclick = function(e) {
       if (e.target.classList.value === 'selectImage') {
         const filePath = e.target.attributes.src.value
@@ -54,7 +57,7 @@ function init() {
         }
       }
     }
-
+    // DEFINE THIS IN CLICK CLASS
     createMeme.onclick = function(e) {
       if (e.target.classList.contains('delete-x')) {
         e.target.parentElement.classList.add('empty');
@@ -63,7 +66,7 @@ function init() {
       }
     }
 }
-
+  // DEFINE THIS IN CLICK CLASS
 function clearForm() {
   document.getElementById('memeform').reset()
   const containers = document.querySelectorAll('.image-select-container')
@@ -76,6 +79,7 @@ function clearForm() {
   })
 }
 
+// DEFINE THIS IN MEME CLASS?
 function createMeme() {
   const imageselectcontainers = document.querySelectorAll('.image-select-container')
   if ([...imageselectcontainers].every(container => container.classList.contains('empty'))) {
@@ -94,6 +98,7 @@ function createMeme() {
     title: memeTitle,
     panels: memePanels
   }
+  // DEFINE THIS IN API CLASS
   fetch(`http://localhost:3000/memes`, {
           method: 'POST',
           headers: {
