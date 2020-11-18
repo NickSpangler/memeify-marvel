@@ -6,7 +6,7 @@ function init() {
         .then(resp => resp.json())
         .then(function(memeData) {
             memeData.forEach((meme) => {
-                const newMeme = new Meme(meme.id, meme.title, meme.likes, meme.panels);
+                const newMeme = new Meme(meme);
                 memeContainer.innerHTML += newMeme.renderHTML();
             })
         })
@@ -109,7 +109,7 @@ function createMeme() {
         .then(response => response.json())
         .then(data => {
           const memeContainer = document.querySelector('#View')
-          const newMeme = new Meme(data.id, data.title, data.likes, data.panels);
+          const newMeme = new Meme(data);
                 console.log(newMeme);
                 memeContainer.innerHTML = newMeme.renderHTML() + memeContainer.innerHTML;
           console.log('Success:', data);

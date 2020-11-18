@@ -1,10 +1,10 @@
 class Meme {
 
-    constructor(id, title, likes, panels) {
-    this.id = id;
-    this.title = title;
-    this.likes = likes;
-    this.panels = panels;
+    constructor(memeObj) {
+    this.id = memeObj.id;
+    this.title = memeObj.title;
+    this.likes = memeObj.likes;
+    this.panels = memeObj.panels;
     }
 
     renderHTML() {
