@@ -21,20 +21,21 @@ function init() {
         likes.innerHTML = parseInt(likes.innerHTML) + 1;
         const data = {likes: parseInt(likes.innerHTML)}
         // DEFINE THIS IN API CLASS
-        fetch(`http://localhost:3000/memes/${e.target.id}/like`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data),
-        })
-        .then(response => response.json())
-        .then(data => {
-          console.log('Success:', data);
-        })
-        .catch((error) => {
-          console.error('Error:', error);
-        });
+        // fetch(`http://localhost:3000/memes/${e.target.id}/like`, {
+        //   method: 'POST',
+        //   headers: {
+        //     'Content-Type': 'application/json',
+        //   },
+        //   body: JSON.stringify(data),
+        // })
+        // .then(response => response.json())
+        // .then(data => {
+        //   console.log('Success:', data);
+        // })
+        // .catch((error) => {
+        //   console.error('Error:', error);
+        // });
+        Api.addLike(e, data)
       }  
     }
 
