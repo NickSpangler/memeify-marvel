@@ -14,9 +14,8 @@ function init() {
     // }
     
 
-    const viewwindow = document.querySelector('#View')
     // DEFINE THIS IN CLICK CLASS
-    viewwindow.onclick = function(e) {
+    memeContainer.onclick = function(e) {
       if (e.target.classList.value === 'entypo-heart') {
         let likes = e.target.nextElementSibling
         likes.innerHTML = parseInt(likes.innerHTML) + 1;
