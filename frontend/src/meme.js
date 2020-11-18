@@ -29,6 +29,14 @@ class Meme {
             <br><br>`
     }
 
+    static renderAllMemes(memesArray) {
+        const memeContainer = document.querySelector('#View')
+        memesArray.forEach((meme) => {
+        const newMeme = new Meme(meme);
+        memeContainer.innerHTML += newMeme.renderHTML();
+        })
+    }
+
     static createMeme() {
         const imageselectcontainers = document.querySelectorAll('.image-select-container')
         if ([...imageselectcontainers].every(container => container.classList.contains('empty'))) {
