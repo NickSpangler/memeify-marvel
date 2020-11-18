@@ -100,24 +100,25 @@ function createMeme() {
     panels: memePanels
   }
   // DEFINE THIS IN API CLASS
-  fetch(`http://localhost:3000/memes`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data),
-        })
-        .then(response => response.json())
-        .then(data => {
-          const memeContainer = document.querySelector('#View')
-          const newMeme = new Meme(data);
-                console.log(newMeme);
-                memeContainer.innerHTML = newMeme.renderHTML() + memeContainer.innerHTML;
-          console.log('Success:', data);
-        })
-        .catch((error) => {
-          console.error('Error:', error);
-        });
+  // fetch(`http://localhost:3000/memes`, {
+  //         method: 'POST',
+  //         headers: {
+  //           'Content-Type': 'application/json',
+  //         },
+  //         body: JSON.stringify(data),
+  //       })
+  //       .then(response => response.json())
+  //       .then(data => {
+  //         const memeContainer = document.querySelector('#View')
+  //         const newMeme = new Meme(data);
+  //               console.log(newMeme);
+  //               memeContainer.innerHTML = newMeme.renderHTML() + memeContainer.innerHTML;
+  //         console.log('Success:', data);
+  //       })
+  //       .catch((error) => {
+  //         console.error('Error:', error);
+  //       });
+  Api.postMeme(data)
   clearForm();
   
   document.getElementById("defaultOpen").click();
