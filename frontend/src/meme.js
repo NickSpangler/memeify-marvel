@@ -15,9 +15,7 @@ class Meme {
                     <div class='inner-frame'>
                         <div class='image-container'>
                             <img src='${panel.image_url}' crossOrigin='anonymous'>
-                                <div class="panel-text">
-                                    <p>${panel.caption}</p>
-                                </div>
+                            ${panel.caption !== "" ? `<div class="panel-text"><p>${panel.caption}</p></div>` : ``}
                         </div>
                     </div>`).join(' ')}
                 </div>
