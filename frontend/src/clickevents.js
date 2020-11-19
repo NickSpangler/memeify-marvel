@@ -65,7 +65,7 @@ class ClickEvents {
         var canvas = document.querySelector('canvas');
         var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
         var a = document.createElement("a");
-        a.setAttribute('download', 'myImage.png');
+        a.setAttribute('download', 'memeify-marvel.png');
         a.setAttribute('href', image);
         a.click();
         canvas.remove()
