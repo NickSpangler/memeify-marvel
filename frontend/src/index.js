@@ -42,11 +42,13 @@ function init() {
     // }
 
     const ironmanTab = document.querySelector('#IronmanTab')
+    const thorTab = document.querySelector('#ThorTab')
     const createMeme = document.querySelector('#createMeme')
     const createPanels = document.querySelectorAll('.image-select-container')
 
     // DEFINE THIS IN CLICK CLASS
     ironmanTab.onclick = (e) => ClickEvents.addImageToTemplate(e)
+    thorTab.onclick = (e) => ClickEvents.addImageToTemplate(e)
     // ironmanTab.onclick = function(e) {
     //   if (e.target.classList.value === 'selectImage') {
     //     const filePath = e.target.attributes.src.value
@@ -70,6 +72,17 @@ function init() {
     //     e.target.remove();
     //   }
     // }
+    function renderThor() {
+      const thorTab = document.querySelector('#ThorTab')
+
+      for (let i = 1; i <= 61; i++) {
+      thorTab.innerHTML += `<div class="square">
+                              <img src='Panel Images/Thor Panels/${i}.png' class='selectImage'>
+                            </div>`
+      }
+    }
+
+    renderThor()
 }
   // DEFINE THIS IN CLICK CLASS
 // function clearForm() {
