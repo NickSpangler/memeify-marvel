@@ -49,15 +49,4 @@ class ClickEvents {
       })
     }
 
-    // static download(e) {
-    //   if (e.target.classList.contains('download-button') {
-    //     console.log("download me!")
-    //   })
-    // }
-    static download(e) {
-      if (e.target.classList.contains('download-button')) {
-          console.log('Download Me!')
-      }
-  }
-
 }

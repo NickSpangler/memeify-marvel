@@ -10,7 +10,7 @@ class Meme {
     renderHTML() {
         return `
             <div class='outercontainer'>
-                <div class='center background strip'>
+                <div class='center background strip displayed-meme'>
                     ${this.panels.map((panel) => `
                     <div class='inner-frame'>
                         <div class='image-container'>
