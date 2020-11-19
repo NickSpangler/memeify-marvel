@@ -1,5 +1,4 @@
 class ClickEvents {
-
     static ironmanTab = document.querySelector('#IronmanTab')
     static createMeme = document.querySelector('#createMeme')
     static createPanels = document.querySelectorAll('.image-select-container')
@@ -49,4 +48,25 @@ class ClickEvents {
       })
     }
 
+     
+
+    static download(e) {
+      console.log('download button clicked')
+      if (e.target.classList.contains('download-button')) {
+      const body = e.target.parentElement.parentElement.previousElementSibling;
+      html2canvas(body, {allowTaint: true, scrollX: 0,
+        scrollY: -window.scrollY}).then(canvas => {
+        document.body.appendChild(canvas);
+      }).then(() => {
+        var canvas = document.querySelector('canvas');
+        var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+        var a = document.createElement("a");
+        a.setAttribute('download', 'myImage.png');
+        a.setAttribute('href', image);
+        a.click();
+        canvas.remove()
+      });
+    };
+  }
+  
 }

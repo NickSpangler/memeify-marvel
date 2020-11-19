@@ -14,7 +14,7 @@ class Meme {
                     ${this.panels.map((panel) => `
                     <div class='inner-frame'>
                         <div class='image-container'>
-                            <img src='${panel.image_url}'>
+                            <img src='${panel.image_url}' crossOrigin='anonymous'>
                                 <div class="panel-text">
                                     <p>${panel.caption}</p>
                                 </div>
