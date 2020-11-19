@@ -54,8 +54,12 @@ class ClickEvents {
       console.log('download button clicked')
       if (e.target.classList.contains('download-button')) {
       const body = e.target.parentElement.parentElement.previousElementSibling;
-      html2canvas(body, {allowTaint: true, scrollX: 0,
-        scrollY: -window.scrollY}).then(canvas => {
+      html2canvas(body, {
+        allowTaint: true, 
+        scrollX: 0,
+        scrollY: -window.scrollY,
+        scale: 3})
+        .then(canvas => {
         document.body.appendChild(canvas);
       }).then(() => {
         var canvas = document.querySelector('canvas');
@@ -68,5 +72,5 @@ class ClickEvents {
       });
     };
   }
-  
+
 }
