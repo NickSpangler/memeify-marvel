@@ -1,7 +1,14 @@
 function init() {
     const memeContainer = document.querySelector('#View')
     Api.getAllMemes()
-    
+    .then( () => {
+      setTimeout(() => {
+        renderSelectImages(ironmanTab, 'Iron Man', 146)
+        renderSelectImages(thorTab, 'Thor', 92)
+        renderSelectImages(hulkTab, 'Hulk', 56)
+        renderSelectImages(captainamericaTab, 'Captain America', 102)
+      }, 2000);
+    })
     memeContainer.addEventListener('click', e => ClickEvents.download(e))
 
     memeContainer.onclick = (e) => ClickEvents.like(e)
@@ -25,10 +32,7 @@ function init() {
         }
     }
 
-    renderSelectImages(ironmanTab, 'Iron Man', 146)
-    renderSelectImages(thorTab, 'Thor', 92)
-    renderSelectImages(hulkTab, 'Hulk', 56)
-    renderSelectImages(captainamericaTab, 'Captain America', 102)
+    
 }
 
 init()

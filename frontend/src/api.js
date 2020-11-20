@@ -1,7 +1,7 @@
 class Api {
 
     static getAllMemes() {
-        fetch(`http://localhost:3000/memes`)
+        return fetch(`http://localhost:3000/memes`)
         .then(resp => resp.json())
         .then( (memeData) => Meme.renderAllMemes(memeData))
     }
