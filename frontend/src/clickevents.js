@@ -51,7 +51,6 @@ class ClickEvents {
      
 
     static download(e) {
-      console.log('download button clicked')
       if (e.target.classList.contains('download-button')) {
       const body = e.target.parentElement.parentElement.previousElementSibling;
       html2canvas(body, {
