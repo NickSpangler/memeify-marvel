@@ -17,50 +17,20 @@ function init() {
     thorTab.onclick = (e) => ClickEvents.addImageToTemplate(e)
     hulkTab.onclick = (e) => ClickEvents.addImageToTemplate(e)
     captainamericaTab.onclick = (e) => ClickEvents.addImageToTemplate(e)
-
     createMeme.onclick = (e) => ClickEvents.removeImageFromTemplate(e)
 
-    function renderIronMan() {
-      const ironmanTab = document.querySelector('#IronmanTab')
-      for (let i = 1; i <= 146; i++) {
-      ironmanTab.innerHTML += `<div class="square">
-                              <img src='Panel Images/Iron Man Panels/${i}.png' class='selectImage'>
-                            </div>`
-      }
+    function renderSelectImages(tabName, dirName, count) {
+      for (let i = 1; i <= count; i++) {
+        tabName.innerHTML += `<div class="square">
+                                <img src='Panel Images/${dirName} Panels/${i}.png' class='selectImage'>
+                              </div>`
+        }
     }
-    renderIronMan()
 
-    function renderThor() {
-      const thorTab = document.querySelector('#ThorTab')
-
-      for (let i = 1; i <= 92; i++) {
-      thorTab.innerHTML += `<div class="square">
-                              <img src='Panel Images/Thor Panels/${i}.png' class='selectImage'>
-                            </div>`
-      }
-    }
-    renderThor()
-
-    function renderHulk() {
-      const hulkTab = document.querySelector('#HulkTab')
-
-      for (let i = 1; i <= 56; i++) {
-      hulkTab.innerHTML += `<div class="square">
-                              <img src='Panel Images/Hulk Panels/${i}.png' class='selectImage'>
-                            </div>`
-      }
-    }
-    renderHulk()
-
-    function renderCaptainAmerica() {
-      const captainamericaTab = document.querySelector('#CaptainamericaTab')
-      for (let i = 1; i <= 102; i++) {
-      captainamericaTab.innerHTML += `<div class="square">
-                              <img src='Panel Images/Captain America Panels/${i}.png' class='selectImage'>
-                            </div>`
-      }
-    }
-    renderCaptainAmerica()
+    renderSelectImages(ironmanTab, 'Iron Man', 146)
+    renderSelectImages(thorTab, 'Thor', 92)
+    renderSelectImages(hulkTab, 'Hulk', 56)
+    renderSelectImages(captainamericaTab, 'Captain America', 102)
 }
 
 init()
