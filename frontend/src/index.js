@@ -72,6 +72,16 @@ function init() {
     //     e.target.remove();
     //   }
     // }
+    function renderIronMan() {
+      const ironmanTab = document.querySelector('#IronmanTab')
+      for (let i = 1; i <= 146; i++) {
+      ironmanTab.innerHTML += `<div class="square">
+                              <img src='Panel Images/Iron Man Panels/${i}.png' class='selectImage'>
+                            </div>`
+      }
+    }
+    renderIronMan()
+
     function renderThor() {
       const thorTab = document.querySelector('#ThorTab')
 
@@ -81,7 +91,6 @@ function init() {
                             </div>`
       }
     }
-
     renderThor()
 }
   // DEFINE THIS IN CLICK CLASS
