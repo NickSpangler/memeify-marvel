@@ -17,7 +17,7 @@ To explore this web application:
 
 5) In a separate terminal window, navigate to the directory 'frontend' and run `npx reload-b` - this will run a front-end server and allow downloading of memes without CORS issues.
 
-6) Open index.html in your browser of choice, and enjoy!
+6) Visit the localhost port your front-end is serving, and enjoy!
 
 ## Usage
 
