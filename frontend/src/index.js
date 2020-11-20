@@ -8,11 +8,13 @@ function init() {
 
     const ironmanTab = document.querySelector('#IronmanTab')
     const thorTab = document.querySelector('#ThorTab')
+    const hulkTab = document.querySelector('#HulkTab')
     const createMeme = document.querySelector('#createMeme')
     const createPanels = document.querySelectorAll('.image-select-container')
 
     ironmanTab.onclick = (e) => ClickEvents.addImageToTemplate(e)
     thorTab.onclick = (e) => ClickEvents.addImageToTemplate(e)
+    hulkTab.onclick = (e) => ClickEvents.addImageToTemplate(e)
 
     createMeme.onclick = (e) => ClickEvents.removeImageFromTemplate(e)
 
@@ -36,6 +38,17 @@ function init() {
       }
     }
     renderThor()
+
+    function renderHulk() {
+      const hulkTab = document.querySelector('#HulkTab')
+
+      for (let i = 1; i <= 56; i++) {
+      hulkTab.innerHTML += `<div class="square">
+                              <img src='Panel Images/Hulk Panels/${i}.png' class='selectImage'>
+                            </div>`
+      }
+    }
+    renderHulk()
 }
 
 init()
