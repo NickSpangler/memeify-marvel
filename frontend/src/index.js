@@ -29,7 +29,7 @@ function init() {
     function renderThor() {
       const thorTab = document.querySelector('#ThorTab')
 
-      for (let i = 1; i <= 61; i++) {
+      for (let i = 1; i <= 92; i++) {
       thorTab.innerHTML += `<div class="square">
                               <img src='Panel Images/Thor Panels/${i}.png' class='selectImage'>
                             </div>`
