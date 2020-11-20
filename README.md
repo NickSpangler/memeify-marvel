@@ -15,7 +15,7 @@ To explore this web application:
 
 4) In a terminal window, navigate to the directory 'marvel-backend' and run `rails s` to start the backend server. 
 
-5) In a separate terminal window, navigate to the directory 'frontend' and run `npm reload-b` - this will run a front-end server andd allow downloading of memes without CORS issues.
+5) In a separate terminal window, navigate to the directory 'frontend' and run `npm reload-b` - this will run a front-end server and allow downloading of memes without CORS issues.
 
 6) Open index.html in your browser of choice, and enjoy!
 
@@ -32,4 +32,4 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/NickSp
 
 ## License
 [license.txt](license.txt)
-The reposityory is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The repository is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
