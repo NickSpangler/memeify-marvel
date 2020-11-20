@@ -6,6 +6,7 @@ function init() {
 
     memeContainer.onclick = (e) => ClickEvents.like(e)
 
+    const createTab = document.querySelector('#Create')
     const ironmanTab = document.querySelector('#IronmanTab')
     const thorTab = document.querySelector('#ThorTab')
     const hulkTab = document.querySelector('#HulkTab')
@@ -13,10 +14,7 @@ function init() {
     const createMeme = document.querySelector('#createMeme')
     const createPanels = document.querySelectorAll('.image-select-container')
 
-    ironmanTab.onclick = (e) => ClickEvents.addImageToTemplate(e)
-    thorTab.onclick = (e) => ClickEvents.addImageToTemplate(e)
-    hulkTab.onclick = (e) => ClickEvents.addImageToTemplate(e)
-    captainamericaTab.onclick = (e) => ClickEvents.addImageToTemplate(e)
+    createTab.onclick = (e) => ClickEvents.addImageToTemplate(e)
     createMeme.onclick = (e) => ClickEvents.removeImageFromTemplate(e)
 
     function renderSelectImages(tabName, dirName, count) {
