@@ -53,6 +53,7 @@ class ClickEvents {
     static download(e) {
       if (e.target.classList.contains('download-button')) {
       const body = e.target.parentElement.parentElement.previousElementSibling;
+      const title = e.target.parentElement.previousElementSibling.innerText
       html2canvas(body, {
         allowTaint: true, 
         scrollX: 0,
@@ -64,7 +65,7 @@ class ClickEvents {
         var canvas = document.querySelector('canvas');
         var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
         var a = document.createElement("a");
-        a.setAttribute('download', 'memeify-marvel.png');
+        a.setAttribute('download', `${title}.png`);
         a.setAttribute('href', image);
         a.click();
         canvas.remove()
