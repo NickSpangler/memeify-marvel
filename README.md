@@ -15,7 +15,7 @@ To explore this web application:
 
 4) In a terminal window, navigate to the directory 'marvel-backend' and run `rails s` to start the backend server. 
 
-5) In a separate terminal window, navigate to the directory 'frontend' and run `npx reload-b` - this will run a front-end server and allow downloading of memes without CORS issues.
+5) In a separate terminal window, navigate to the directory 'frontend' and run `npx reload -b` - this will run a front-end server and allow downloading of memes without CORS issues.
 
 6) Visit the localhost port your front-end is serving, and enjoy!
 

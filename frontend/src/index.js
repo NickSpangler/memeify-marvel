@@ -31,8 +31,6 @@ function init() {
                               </div>`
         }
     }
-
-    
 }
 
 init()
